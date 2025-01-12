@@ -2,12 +2,12 @@
   "engines":{
     "node": "22.12.0"
   },
-  "name": "WanderLust",
+  "name": "wanderlust",
   "version": "1.0.0",
   "description": "Full Stack Project By Amir Sohail",
   "main": "index.js",
  "scripts": {
-  "start": "node app.js"
+  "build": "npm install --force"
 },
   "author": "Amir Sohail",
   "license": "ISC",
