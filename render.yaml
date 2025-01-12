@@ -1,0 +1,13 @@
+version: "1"
+services:
+  - type: web
+    name: wanderlust
+    env: node
+    plan: free  
+    buildCommand: "npm install"  
+    startCommand: "node app.js"  
+    envVars:
+      - key: NODE_ENV
+        value: production  
+    instanceType: "free"  
+    autoDeploy: true  
