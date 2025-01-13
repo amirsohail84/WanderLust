@@ -18,14 +18,6 @@
           <a class="nav-link" href="/listings">Explore</a>
         </div>
         <div class="navbar-nav ms-auto">
-          <form action="/listings/search" method="GET" class="d-flex">
-            <input name="location" 
-            value="<%= searchQuery && searchQuery.location ? searchQuery.location : '' %>" class="form-control me-2 btnSearch" 
-            type="text" placeholder="Search destinations">
-            <button class="btn btn-outline-danger btnSearch" type="submit">Search</button>
-          </form>
-        </div>
-        <div class="navbar-nav ms-auto">
           <a class="nav-link" href="/listings/new">WanderLust your home</a>
           <%if(!currUser){%>
             <a class="nav-link" href="/signup"><b>Sign Up</b></a>

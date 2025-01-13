@@ -90,8 +90,8 @@ body{
 
 /* MAP */
 #map{
-    width: 98%;
+    width: 100%;
     max-width: 1200px; 
-    height: 50vh;
+    height: 60vh;
     min-height: 200px;
 }

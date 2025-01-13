@@ -19,11 +19,17 @@
     </div>
 </div>
 <%if(currUser && listing.owner._id.equals(currUser._id)){%>
-    <div class="btns mb-5">
-        <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-1 offset-3">Edit</a>
-        <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
-            <button class="btn btn-danger offset-5">Delete</button>
-        </form>
+    <div class="mb-5 d-flex justify-content-center">
+        <div class="row w-100 text-center">
+            
+            <form method="GET" action="/listings/<%= listing._id %>/edit" class="col-8 col-sm-3 col-md-2 mb-2 mx-auto">
+                <button type="submit" class="btn btn-dark w-100">Edit</button>
+            </form>
+    
+            <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE" class="col-8 col-sm-3 col-md-2 mb-2 mx-auto">
+                <button class="btn btn-danger w-100">Delete</button>
+            </form>
+        </div>
     </div>
 <%}%>
 
@@ -65,7 +71,7 @@
     <div class="row">
         <p><b>All reviews-</p></b>
         <% for(review of listing.reviews){ %>
-        <div class="card col-5 ms-3 mb-3">
+        <div class="card col-12 col-sm-6 col-md-5 ms-3 mb-3">
             <div class="card-body">
                 <h6 class="card-title">@<%=review.author.username%></h6>
                 <p class="starability-result card-text" data-rating="<%=review.rating%>"></p>
